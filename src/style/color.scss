@@ -1,0 +1,16 @@
+$black:   #08090A;
+$white: #f4f7f5;
+$silver: #a7a2a9;
+$gray: #575a5e;
+$dark-gray: #212529;
+
+$theme-colors: (
+    "primary": $black,
+    "secondary": $white,
+    "info" : $silver,
+    "dark" : $dark-gray,
+    "light" : $gray 
+);
+
+
+@import "~bootstrap/scss/bootstrap";

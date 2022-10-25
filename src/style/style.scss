@@ -1,0 +1,128 @@
+@import "./color.scss";
+
+.myNav{
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+#logo{
+    color: $white;
+    font-size: small;
+}
+
+.navLink{
+    text-decoration: none;
+    color: $white;
+    text-align: center;
+    font-size: small;
+}
+
+.navLink:hover{
+    color: $silver;
+}
+
+.hero{
+    position: fixed;
+    top: 40px;
+    z-index: 1;
+    height: -webkit-calc(100vh - 40px);
+    height: -moz-calc(100vh - 40px);
+    height: calc(100vh - 40px);
+    background-image: url("../img/image/bg_s_right.png"), url("../img/image/bg_s_left.png");
+    background-repeat: no-repeat;
+    background-position: top right, bottom left; 
+    background-size: auto, auto;
+    @include media-breakpoint-up(lg) {
+        background-image: url("../img/image/ball.png");
+        background-repeat: no-repeat;
+        background-position: 90% center; 
+    }
+}
+
+.heroTitle{
+    margin-top: 230px;
+    font-size: 45px;
+    font-weight: bolder;
+    color: $dark-gray;
+    text-align: center;
+    @include media-breakpoint-up(md) {
+        margin-top: 100px;
+        font-size: 60px;
+        text-align: center;
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: 70px;
+        text-align: left;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 90px;
+    }
+}
+
+.my_button{
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.aboutBack{
+    position: relative;
+    top: -webkit-calc(100vh);
+    top: -moz-calc(100vh);
+    top: calc(100vh);
+    background: linear-gradient($dark-gray 50%, $gray 50%);
+    z-index: 2;
+    padding-left: 50px;
+    padding-right: 50px;
+    @include media-breakpoint-up(md) {
+        height: -webkit-calc(100vh - 40px);
+        height: -moz-calc(100vh - 40px);
+        height: calc(100vh - 40px);
+        background: linear-gradient(to right, $dark-gray 70%, $gray 30%);
+    }
+}
+
+.aboutBox{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    @include media-breakpoint-up(md) {
+        width: 50%;
+        margin-top: 200px;
+    }
+}
+
+.aboutTitle{
+    color: $white;
+    font-weight: 200;
+    font-size: 30px;
+}
+
+.aboutContent{
+    color: $white;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.skillsBox{
+    margin-top: 80px;
+    margin-bottom: 30px;
+    @include media-breakpoint-up(md) {
+        margin-top: 100px;
+        margin-bottom: 0px;
+    }
+}
+
+.skillsTitle{
+    color: $black;
+    font-weight: 300;
+    font-size: 30px;  
+    text-align: right;
+}
+
+.skillsContent{
+    color: $black;
+    margin-bottom: 3px !important;
+    text-align: right;
+    font-weight: 600;
+    font-size: 40px;
+}
