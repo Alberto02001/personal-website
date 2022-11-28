@@ -5,6 +5,8 @@ const About = () =>{
 
     return (
         <>
+        <div className="blackScrollBack">
+            <div className="positionScrollPage"></div>
             <div className="d-flex flex-column flex-md-row aboutBack">
                 <div className="d-flex aboutBox">
                     <div className="d-flex flex-column justify-content-center">
@@ -22,6 +24,7 @@ const About = () =>{
                     <p className="skillsContent">Illustrator</p>
                     </div>
                 </div>
+            </div>
             </div>
         </>
     )

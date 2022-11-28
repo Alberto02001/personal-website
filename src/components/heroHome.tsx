@@ -1,20 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import {Button, Container} from "react-bootstrap";
 
 const HeroHome = () =>{
+    const [back, setBack] = useState(false);
 
+    const change = () => {
+      if (window.scrollY >= 1000) setBack(true);
+      else setBack(false);
+    };
+  
+    window.addEventListener("scroll", change);
 
     return (
         <>
-            <Container className="bg-primary hero d-flex justify-content-center justify-content-md-start" fluid>
-                <Container>
-                    <div className="d-flex flex-column align-items-center align-items-lg-start">
+            <Container className={`bg-primary d-flex justify-content-center ${back ? "heroOnScroll" : "hero"}`} fluid>
+                    <div className={`d-flex flex-column align-items-center justify-content-center ${back ? "d-none" : ""}`}>
                         <h1 className="heroTitle">
                             Hello.<br/> I'm Alberto<br/>Web Developer
                         </h1>
-                        <Button variant="dark" className="my_button col-5 col-md-3 col-lg-2 mt-3"><strong>Scopri!</strong></Button>
+                        <Button variant="info" className="heroButton col-5 col-md-3 mt-3"><strong>Scopri!</strong></Button>
                     </div>
-                </Container>
             </Container>
         </>
     )

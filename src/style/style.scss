@@ -1,9 +1,11 @@
 @import "./color.scss";
 
+// navbar
+
 .myNav{
     position: fixed;
     width: 100%;
-    z-index: 3;
+    z-index: 2;
 }
 
 #logo{
@@ -22,67 +24,98 @@
     color: $silver;
 }
 
+// hero
+
 .hero{
     position: fixed;
-    top: 40px;
-    z-index: 1;
-    height: -webkit-calc(100vh - 40px);
-    height: -moz-calc(100vh - 40px);
-    height: calc(100vh - 40px);
-    background-image: url("../img/image/bg_s_right.png"), url("../img/image/bg_s_left.png");
+    top: 55px;
+    height: -webkit-calc(100vh);
+    height: -moz-calc(100vh);
+    height: calc(100vh);
+    background-image: url("../img/image/blue-background.gif");
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-position: top right, bottom left; 
-    background-size: auto, auto;
     @include media-breakpoint-up(lg) {
-        background-image: url("../img/image/ball.png");
-        background-repeat: no-repeat;
-        background-position: 90% center; 
+        top: 40px;
     }
 }
 
+.heroOnScroll{
+    position: fixed;
+    top: 55px;
+    height: -webkit-calc(100vh);
+    height: -moz-calc(100vh);
+    height: calc(100vh);
+    background-color: $black;
+    @include media-breakpoint-up(lg) {
+        top: 40px;
+    }
+}
+
+
 .heroTitle{
-    margin-top: 230px;
     font-size: 45px;
     font-weight: bolder;
-    color: $dark-gray;
+    color: $silver;
     text-align: center;
     @include media-breakpoint-up(md) {
-        margin-top: 100px;
         font-size: 60px;
-        text-align: center;
     }
     @include media-breakpoint-up(lg) {
         font-size: 70px;
-        text-align: left;
     }
     @include media-breakpoint-up(xl) {
         font-size: 90px;
     }
 }
 
-.my_button{
+.heroButton{
     border-radius: 20px;
     padding: 10px;
 }
 
-.aboutBack{
+.heroButton:hover{
+    border-radius: 20px;
+    padding: 10px;
+    background-color: $white !important;
+}
+
+// aboutPage
+
+.blackScrollBack{
+    background-color: black;
+}
+
+.positionScrollPage{
     position: relative;
     top: -webkit-calc(100vh);
     top: -moz-calc(100vh);
     top: calc(100vh);
-    z-index: 2;
+    background-color: $black;
+    height: -webkit-calc(100vh);
+    height: -moz-calc(100vh);
+    height: calc(100vh);
+}
+
+.aboutBack{
+    position: relative;
 }
 
 .aboutBox{
-    background-color: $dark-gray;
+    background-color: $black;
     width: 100%;
     padding: 40px;
+    border: none;
     @include media-breakpoint-up(md) {
-        height: -webkit-calc(100vh - 40px);
-        height: -moz-calc(100vh - 40px);
-        height: calc(100vh - 40px);
+        height: -webkit-calc(100vh);
+        height: -moz-calc(100vh);
+        height: calc(100vh);
         width: 70%;
         padding-right: 180px;
+        background-image: url("../img/image/about-bg-top-right.png"), url("../img/image/about-bg-down-left.png"),;
+        background-position: top right, bottom left;
+        background-repeat: no-repeat;
+        background-size: auto, 60%;
     }
 }
 
@@ -93,20 +126,26 @@
 }
 
 .aboutContent{
-    color: $white;
+    color: $silver;
     font-weight: 400;
     font-size: 20px;
 }
 
 .skillsBox{
-    background-color: $gray;
+    background-color: $white;
     width: 100%;
     padding: 40px;
+    background-image: url("../img/image/about-bg-sm.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 60% 100%;
+    border: none;
     @include media-breakpoint-up(md) {
-        height: -webkit-calc(100vh - 40px);
-        height: -moz-calc(100vh - 40px);
-        height: calc(100vh - 40px);
+        height: -webkit-calc(100vh);
+        height: -moz-calc(100vh);
+        height: calc(100vh);
         width: 30%;
+        background-image: none;
     }
 }
 
@@ -123,4 +162,353 @@
     text-align: right;
     font-weight: 600;
     font-size: 40px;
+}
+
+// MyWork
+
+.workTitleBox{
+    position: relative;
+    padding: 30px;
+    background-color: $black;
+    @include media-breakpoint-up(md) {
+        border-top: 10px $white;
+        border-left: 0px $white;
+        border-bottom: 0px;
+        border-right: 0px;
+        border-style: solid;
+
+    }
+}
+
+.workTitle{
+    color: $dark-gray;
+    font-weight: 700;
+    font-size: 30px; 
+}
+
+.workSubTitle{
+    color: $white;
+    font-weight: 300;
+    font-size: 30px; 
+    @include media-breakpoint-up(md) {
+        font-size: 40px; 
+    }
+}
+
+.overlay img {
+    max-height: initial;
+    overflow: hidden;
+}
+
+.overlay:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    opacity: 0.6;
+}
+
+.itemsContainer {
+
+    .itemsTitle {
+        color: $white;
+        font-weight: 700;
+        font-size: 30px; 
+
+        @include media-breakpoint-up(md) {
+            font-size: 40px; 
+        }
+    }
+
+    .itemsDescription{
+        display: none;
+        text-align: start;
+        @include media-breakpoint-up(md) {
+            display: block;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+    }
+
+    hr {
+    width: 100%;
+        @include media-breakpoint-up(md) {
+            width: 60%;
+            position: relative;
+            top: -30px;
+            transition: top 0.5s;
+        }
+    }
+
+    .visitLink {   
+        text-decoration: none;
+        color: $white;  
+        @include media-breakpoint-up(md) {
+            position: relative;
+            top: -30px;
+            transition: top 0.5s;
+        }
+    }
+
+    .visitLink:hover {
+        color: $silver; 
+    }
+
+}
+
+@include media-breakpoint-up(md) {
+    .itemsContainer:hover {
+
+        .itemsDescription{
+            opacity: 1;
+            transition: opacity 1s;
+        }
+    
+        .visitLink {
+            top: 0px;
+            transition: top 0.5s;
+        }
+    
+        hr {
+            top: 0px;
+            transition: top 0.5s;
+        }
+    }    
+}
+
+// contactPage
+
+.contactBack{
+    position: relative;
+}
+
+.contactBox1{
+    background-color: $black;
+    width: 100%;
+    border: none;
+    @include media-breakpoint-up(md) {
+        height: -webkit-calc(100vh);
+        height: -moz-calc(100vh);
+        height: calc(100vh);
+        width: 50%;
+    }
+}
+
+.contactBox2{
+    background-color: $black;
+    width: 100%;
+    border: none;
+
+    @include media-breakpoint-up(md) {
+        height: -webkit-calc(100vh);
+        height: -moz-calc(100vh);
+        height: calc(100vh);
+        width: 50%;
+    }
+}
+
+.contactLabel{
+    color: $dark-gray;
+    font-weight: 800;
+    font-size: 20px; 
+}
+
+.contactTitle{
+    color: $white;
+    font-weight: 300;
+    font-size: 25px;
+    @include media-breakpoint-up(lg) {
+        font-size: 35px; 
+    }
+}
+
+.contactDescription{
+    color: $silver;
+    font-weight: 400;
+    font-size: 15px; 
+}
+
+.emailLink{
+    text-decoration: none;
+    svg{
+        fill: $white;
+        width: 20px;
+        transition: fill 0.2s;
+        @include media-breakpoint-up(lg) {
+            width: 25px;
+        }
+    }
+    p{
+        margin-top: 15px;
+        margin-left: 10px;
+        color: $white;
+        font-weight: 400;
+        font-size: 18px; 
+        transition: color 0.2s;
+        @include media-breakpoint-up(md) {
+            margin-top: 12px;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 20px;
+        }
+    }
+}
+
+.emailLink:hover{
+    svg{
+        fill: $dark-gray;
+        transition: fill 0.2s;
+    }
+    p{
+        color: $dark-gray;
+        transition: color 0.2s;
+    }
+}
+
+.myLabel{
+    color: $dark-gray;
+    font-weight: 400;
+    font-size: 18px; 
+    margin-bottom: 5px;
+    margin-top: 25px;
+    @include media-breakpoint-down(md) {
+        margin-left: 20px;
+    }
+}
+
+.myForm{
+    background-color: $dark-gray !important;
+    @include media-breakpoint-down(md) {
+        margin-left: 20px;
+    }
+}
+
+input, select, textarea{
+    color: $white;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.nameForm{    
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 40px;
+
+}
+
+.nameNotValid{    
+    background-image: url("./../img/icons/user.png");
+}
+
+.nameValid{    
+    background-image: url("./../img/icons/user-green.png");
+    z-index: 10;
+}
+
+.emailForm{
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 40px;
+}
+
+.emailNotValid{    
+    background-image: url("./../img/icons/email.png");   
+}
+
+.emailValid{    
+    background-image: url("./../img/icons/email-green.png");
+}
+
+.sendButton{
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.3s;
+}
+
+.sendButton:hover{
+    background-color: $white !important;
+    color: $dark-gray;
+    border-radius: 15px;
+    transition: all 0.3s;
+}
+
+.closeModalButton{
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.3s;
+}
+
+.closeModalButton:hover{
+    background-color: $black !important;
+    color: $white;
+    border-radius: 13px;
+    transition: all 0.3s;
+}
+
+// footer
+
+.footerContainer{
+    position: relative;
+    background-color: $black;
+    padding-top: 50px;
+
+    hr{
+        border-top: 1.5px solid $silver;
+        width: 80%;
+    }
+
+    a{
+        text-decoration: none;
+        color: $silver;
+        font-size: 15px;
+        margin: 10px;
+        padding: 10px;
+        @include media-breakpoint-up(md) {
+            margin: 20px;
+        }
+        @include media-breakpoint-up(lg) {
+            margin: 30px;
+        }
+    }
+
+    a:hover{
+        text-decoration: underline;
+    }
+
+    .footerButton{
+        background-position: center;
+        background-repeat: no-repeat;
+        border: none;
+        background-size: 29px 29px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: $black;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .footerButton:hover{
+        border: 2px solid white;
+    }
+
+    .linkedin{
+        background-image: url("./../img/icons/linkedin-icon.png");
+    }
+
+    .github{
+        background-image: url("./../img/icons/github-icon.png");
+    }
+
+    .discord{
+        background-image: url("./../img/icons/discord-icon.png");
+    }
+
 }
