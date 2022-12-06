@@ -128,8 +128,9 @@
 }
 
 @keyframes arrowAimation {
-    from {background-size: 25px;}
-    to {background-size: 35px;}
+    0% {background-size: 25px;}
+    50% {background-size: 35px;}
+    100% {background-size: 25px;}
 }
 
 .heroButton:hover{
