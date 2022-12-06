@@ -61,10 +61,11 @@ const ContactMe = () =>{
 
     return (
         <>
+            <a name="contact"></a>
             <div className="d-flex flex-column flex-md-row contactBack">
                 <div className="contactBox1 d-flex justify-content-center align-items-center">
                     <div className="d-flex flex-column align-items-start col-10 col-md-8 col-lg-7 mt-5 mt-md-0">
-                        <p className="contactLabel">CONTACT</p>
+                        <p className="contactLabel mt-4 mt-md-0">CONTACT</p>
                         <p className="contactTitle">Got a problem to solve?</p>
                         <p className="contactDescription">Get your space suit ready and tell me your ideas to develop your dream application.</p>
                         <a className="emailLink d-flex" href="mailto: albertosoldiviero@gmail.com">

@@ -1,0 +1,10 @@
+{
+    "navLink": {
+        "about": "ABOUT",
+        "work": "WORK",
+        "contact": "CONTACT"
+      },
+      "hero": {
+        "title": ["Hello.", "I'm Alberto,", "Web Developer"]
+      }
+}

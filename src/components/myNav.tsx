@@ -1,20 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navbar, Container, Nav} from "react-bootstrap";
 
-const MyNav = () =>{
+const MyNav = (props) =>{
+    const content = props.content   
+    const [nav, setNav] = useState(false);
+    const [expanded, setExpanded] = useState(false);
+    const [selectedLaguage, setLanguage] = useState(true);
+    props.onSelectLanguage(selectedLaguage); 
+    
+    const change = () => {
+      if (window.scrollY >= 600) setNav(true);
+      else setNav(false);
+    };
+  
+    window.addEventListener("scroll", change);
 
-
+    const selectLenguage = (e : any) => {
+        e.target.value === "ita" ? setLanguage(true) : setLanguage(false)
+        setExpanded(false)
+    };
+   
     return (
         <>
-            <Navbar bg="primary" expand="lg" className="myNav">
+            <Navbar expanded={expanded} expand="lg" className={`myNav ${nav ? "navColorScroll" : "navColor"} ${expanded ? "navCloseIcon" : "navIcon"}`}>                  
                 <Container>
                     <Navbar.Brand id="logo" href="#home"><strong>ALBERTO</strong> SOLDIVIERO</Navbar.Brand>                    
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={ expanded ? () => setExpanded(false) : () => setExpanded(true)}/>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-lg-auto">
-                            <a className="navLink px-2" href="#About">ABOUT</a>
-                            <a className="navLink px-2" href="#Work">WORK</a>
-                            <a className="navLink px-2" href="#Contact">CONTACT</a>
+                            <a className="navLink px-2" href="#about" onClick={() => setExpanded(false)}>{content.navLink.about}</a>
+                            <a className="navLink px-2" href="#work" onClick={() => setExpanded(false)}>{content.navLink.work}</a>
+                            <a className="navLink px-2" href="#contact" onClick={() => setExpanded(false)}>{content.navLink.contact}</a>
+                            <select id="Lenguage"
+                            onChange={selectLenguage}
+                            >
+                                <option value="ita">ITA</option>
+                                <option value="eng">ENG</option>
+                            </select>
                         </Nav>                            
                     </Navbar.Collapse>
                 </Container>

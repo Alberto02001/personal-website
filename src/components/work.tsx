@@ -7,7 +7,8 @@ const MyWork = () =>{
 
 
     return (
-        <>
+        <>  
+            <a name="work"></a>
             <div className="d-flex flex-column align-items-center justify-content-center workTitleBox">
                 <p className="mt-5 workTitle">Work</p>
                 <p className="mt-1 workSubTitle">Dig into my universe</p>

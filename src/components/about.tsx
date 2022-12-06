@@ -7,9 +7,10 @@ const About = () =>{
         <>
         <div className="blackScrollBack">
             <div className="positionScrollPage"></div>
+            <a name="about"></a>
             <div className="d-flex flex-column flex-md-row aboutBack">
                 <div className="d-flex aboutBox">
-                    <div className="d-flex flex-column justify-content-center">
+                    <div className="d-flex flex-column justify-content-center mt-4 mt-md-0">
                     <p className="aboutTitle">ABOUT</p>
                     <p className="aboutContent">I'm Alberto, a passionate freelancer bringing you programming and design from the future. I am experienced in developing web and desktop applications including full front end design. This includes brand identity, graphics and illustrations.</p>
                     </div>
