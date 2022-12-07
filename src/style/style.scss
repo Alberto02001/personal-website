@@ -3,11 +3,11 @@
 // navbar
 
 .navIcon{
-    --bs-navbar-toggler-icon-bg: url("./../img/icons/burger-icon.png");
+    --bs-navbar-toggler-icon-bg: url("../../public/img/icons/burger-icon.png");
 }
 
 .navCloseIcon{
-    --bs-navbar-toggler-icon-bg: url("./../img/icons/close-icon.png");
+    --bs-navbar-toggler-icon-bg: url("../../public/img/icons/close-icon.png");
     @include media-breakpoint-down(md) {
         background-color: $dark-gray !important;
     }
@@ -80,7 +80,7 @@
     height: -webkit-calc(100vh);
     height: -moz-calc(100vh);
     height: calc(100vh);
-    background-image: url("../img/image/blue-background.gif");
+    background-image: url("../../public/img/image/blue-background.gif");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     @include media-breakpoint-up(lg) {
@@ -120,7 +120,7 @@
     top: 75px;
     background-color: transparent;
     border: none;
-    background-image: url("../img/icons/down-arrow.png");
+    background-image: url("../../public/img/icons/down-arrow.png");
     background-position: center;
     background-repeat: no-repeat;
     animation: arrowAimation 1s;
@@ -169,7 +169,7 @@
         height: calc(100vh);
         width: 70%;
         padding-right: 180px;
-        background-image: url("../img/image/about-bg-top-right.png"), url("../img/image/about-bg-down-left.png"),;
+        background-image: url("../../public/img/image/about-bg-top-right.png"), url("../../public/img/image/about-bg-down-left.png"),;
         background-position: top right, bottom left;
         background-repeat: no-repeat;
         background-size: 30%, 60%;
@@ -200,7 +200,7 @@
     background-color: $white;
     width: 100%;
     padding: 40px;
-    background-image: url("../img/image/about-bg-sm.png");
+    background-image: url("../../public/img/image/about-bg-sm.png");
     background-position: left;
     background-repeat: no-repeat;
     background-size: 60% 100%;
@@ -471,11 +471,11 @@ input, select, textarea{
 }
 
 .nameNotValid{    
-    background-image: url("./../img/icons/user.png");
+    background-image: url("../../public/img/icons/user.png");
 }
 
 .nameValid{    
-    background-image: url("./../img/icons/user-green.png");
+    background-image: url("../../public/img/icons/user-green.png");
     z-index: 10;
 }
 
@@ -487,11 +487,11 @@ input, select, textarea{
 }
 
 .emailNotValid{    
-    background-image: url("./../img/icons/email.png");   
+    background-image: url("../../public/img/icons/email.png");   
 }
 
 .emailValid{    
-    background-image: url("./../img/icons/email-green.png");
+    background-image: url("../../public/img/icons/email-green.png");
 }
 
 .sendButton{
@@ -568,15 +568,15 @@ input, select, textarea{
     }
 
     .linkedin{
-        background-image: url("./../img/icons/linkedin-icon.png");
+        background-image: url("../../public/img/icons/linkedin-icon.png");
     }
 
     .github{
-        background-image: url("./../img/icons/github-icon.png");
+        background-image: url("../../public/img/icons/github-icon.png");
     }
 
     .discord{
-        background-image: url("./../img/icons/discord-icon.png");
+        background-image: url("../../public/img/icons/discord-icon.png");
     }
 
 }

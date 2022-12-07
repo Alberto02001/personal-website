@@ -1,10 +1,52 @@
 {
-    "navLink": {
-        "about": "ABOUT",
-        "work": "WORK",
-        "contact": "CONTACT"
+  "navLink": {
+    "about": "ABOUT",
+    "work": "WORK",
+    "contact": "CONTACT"
+  },
+  "hero": {
+    "title": ["Hello.", "I'm Alberto,", "Web Developer"]
+  },
+  "about": {
+    "aboutTitle": "ABOUT",
+    "aboutDescription": "I'm Alberto, a passionate freelancer bringing you programming and design from the future. I am experienced in developing web and desktop applications including full front end design. This includes brand identity, graphics and illustrations.",
+    "skillsTitle": "My Skills",
+    "skills": ["HTML", "CSS", "JS", "Angular", "React"]
+  },
+  "myWork": {
+    "workTitle": "Work",
+    "workDescription": "Discover my works!",
+    "works": [
+      {
+        "title": "Coming soon",
+        "subTitle": "New works coming soon",
+        "link": "",
+        "linkLabel":"",
+        "img":"img/work-bg/comingSoon.jpg",
+        "imgMobile":"img/work-bg/mobile-comingSoon.jpg",
+        "alt":"first-slide"
       },
-      "hero": {
-        "title": ["Hello.", "I'm Alberto,", "Web Developer"]
+      {
+        "title": "Coming soon",
+        "subTitle": "New works coming soon",
+        "link": "",
+        "linkLabel":"",
+        "img":"img/work-bg/comingSoon.jpg",
+        "imgMobile":"img/work-bg/mobile-comingSoon.jpg",
+        "alt":"first-slide"
       }
+    ]
+  },
+  "contact": {
+    "contactLabel":"CONTACT",
+    "contactTitle": "Do you have any question?",
+    "contactDescription": "For any questions or requests, please contact me, i will try to answer your question as soon as possible.",
+    "myEmail": "albertosoldiviero@gmail.com",
+    "nameLabel": "NAME",
+    "emailLabel": "EMAIL",
+    "messaggeLabel": "MESSAGGE",
+    "buttonLabel": "Send",
+    "modalText": "The message has been sent successfully!",
+    "modalButton": "Close"
+  }
 }

@@ -17,12 +17,12 @@ const Home = () => {
 
     return(
         <>
-        <MyNav onSelectLanguage={handleLanguage} content={Language}/>
-        <HeroHome content={Language}/>       
-        <About/>
-        <MyWork/>
-        <ContactMe/>
-        <MyFooter/>
+        <MyNav onSelectLanguage={handleLanguage} content={Language.navLink}/>
+        <HeroHome content={Language.hero}/>       
+        <About content={Language.about}/>
+        <MyWork content={Language.myWork}/>
+        <ContactMe content={Language.contact}/>
+        <MyFooter content={Language.navLink}/>
         </>
     )
 }

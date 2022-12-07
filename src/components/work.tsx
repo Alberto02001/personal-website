@@ -3,26 +3,22 @@ import { Carousel } from "react-bootstrap";
 // @ts-ignore
 import CarouselItems from "./carouselItems.tsx";
 
-const MyWork = () =>{
-
+const MyWork = (props) =>{
+    const content = props.content
 
     return (
         <>  
             <a name="work"></a>
             <div className="d-flex flex-column align-items-center justify-content-center workTitleBox">
-                <p className="mt-5 workTitle">Work</p>
-                <p className="mt-1 workSubTitle">Dig into my universe</p>
+                <p className="mt-5 workTitle">{content.workTitle}</p>
+                <p className="mt-1 workSubTitle">{content.workDescription}</p>
             </div>
             <Carousel indicators={false} >
-                <Carousel.Item>
-                    <CarouselItems title="Example Web-site 1" subTitle="Example description of this website" link="" img="https://media.istockphoto.com/id/1248542684/vector/abstract-blurred-colorful-background.jpg?s=612x612&w=0&k=20&c=6aJX8oyUBsSBZFQUCJDP7KZ1y4vrf-wEH_SJsuq7B5I=" alt="first-slide"/> 
-                </Carousel.Item>
-                <Carousel.Item>
-                    <CarouselItems title="Example Web-site 2" subTitle="Example description of this website" link="" img="https://media.istockphoto.com/id/1248542684/vector/abstract-blurred-colorful-background.jpg?s=612x612&w=0&k=20&c=6aJX8oyUBsSBZFQUCJDP7KZ1y4vrf-wEH_SJsuq7B5I=" alt="first-slide"/> 
-                </Carousel.Item>
-                <Carousel.Item>
-                    <CarouselItems title="Example Web-site 3" subTitle="Example description of this website" link="" img="https://media.istockphoto.com/id/1248542684/vector/abstract-blurred-colorful-background.jpg?s=612x612&w=0&k=20&c=6aJX8oyUBsSBZFQUCJDP7KZ1y4vrf-wEH_SJsuq7B5I=" alt="first-slide"/> 
-                </Carousel.Item>
+                {content.works.map(item =>
+                    <Carousel.Item>
+                        <CarouselItems title={item.title} subTitle={item.subTitle} link={item.link} linkLabel={item.linkLabel} img={item.img} imgMobile={item.imgMobile} alt={item.alt}/> 
+                    </Carousel.Item>
+                )}
             </Carousel>
         </>
     )

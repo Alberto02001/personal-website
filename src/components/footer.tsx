@@ -1,7 +1,7 @@
 import React from "react";
 
-const MyFooter = () =>{
-
+const MyFooter = (props) =>{
+    const content = props.content
 
     return (
         <>
@@ -9,9 +9,9 @@ const MyFooter = () =>{
                 <div className="d-flex flex-column align-items-center">
                     <hr />
                     <div className="d-flex">
-                        <a href="#about">ABOUT</a>
-                        <a href="#work">WORK</a>
-                        <a href="#contact">CONTACT</a>
+                        <a href="#about">{content.about}</a>
+                        <a href="#work">{content.work}</a>
+                        <a href="#contact">{content.contact}</a>
                     </div>
                     <hr />
 

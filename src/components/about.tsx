@@ -1,7 +1,7 @@
 import React from "react";
 
-const About = () =>{
-
+const About = (props) =>{
+    const content = props.content
 
     return (
         <>
@@ -11,22 +11,18 @@ const About = () =>{
             <div className="d-flex flex-column flex-md-row aboutBack">
                 <div className="d-flex aboutBox">
                     <div className="d-flex flex-column justify-content-center mt-4 mt-md-0">
-                    <p className="aboutTitle">ABOUT</p>
-                    <p className="aboutContent">I'm Alberto, a passionate freelancer bringing you programming and design from the future. I am experienced in developing web and desktop applications including full front end design. This includes brand identity, graphics and illustrations.</p>
+                        <p className="aboutTitle">{content.aboutTitle}</p>
+                        <p className="aboutContent">{content.aboutDescription}</p>
                     </div>
                 </div>
                 <div className="d-flex skillsBox justify-content-end">
                     <div className="d-flex flex-column justify-content-center">
-                    <p className="skillsTitle">My Skills</p>
-                    <p className="skillsContent">JS</p>
-                    <p className="skillsContent">Angular</p>
-                    <p className="skillsContent">React</p>
-                    <p className="skillsContent">Photoshop</p>
-                    <p className="skillsContent">Illustrator</p>
-                    </div>
+                        <p className="skillsTitle">{content.skillsTitle}</p>
+                        {content.skills.map(skill => <p className="skillsContent">{skill}</p>)}
+                     </div>
                 </div>
             </div>
-            </div>
+        </div>
         </>
     )
 }

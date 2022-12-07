@@ -2,7 +2,8 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Modal } from 'react-bootstrap';
 
-const ContactMe = () =>{
+const ContactMe = (props) =>{
+    const content = props.content   
 
     const [show, setShow] = useState(false);
 
@@ -65,19 +66,19 @@ const ContactMe = () =>{
             <div className="d-flex flex-column flex-md-row contactBack">
                 <div className="contactBox1 d-flex justify-content-center align-items-center">
                     <div className="d-flex flex-column align-items-start col-10 col-md-8 col-lg-7 mt-5 mt-md-0">
-                        <p className="contactLabel mt-4 mt-md-0">CONTACT</p>
-                        <p className="contactTitle">Got a problem to solve?</p>
-                        <p className="contactDescription">Get your space suit ready and tell me your ideas to develop your dream application.</p>
+                        <p className="contactLabel mt-4 mt-md-0">{content.contactLabel}</p>
+                        <p className="contactTitle">{content.contactTitle}</p>
+                        <p className="contactDescription">{content.contactDescription}</p>
                         <a className="emailLink d-flex" href="mailto: albertosoldiviero@gmail.com">
                         <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 88.86"><title>email</title><path d="M7.05,0H115.83a7.07,7.07,0,0,1,7,7.05V81.81a7,7,0,0,1-1.22,4,2.78,2.78,0,0,1-.66,1,2.62,2.62,0,0,1-.66.46,7,7,0,0,1-4.51,1.65H7.05a7.07,7.07,0,0,1-7-7V7.05A7.07,7.07,0,0,1,7.05,0Zm-.3,78.84L43.53,40.62,6.75,9.54v69.3ZM49.07,45.39,9.77,83.45h103L75.22,45.39l-11,9.21h0a2.7,2.7,0,0,1-3.45,0L49.07,45.39Zm31.6-4.84,35.46,38.6V9.2L80.67,40.55ZM10.21,5.41,62.39,47.7,112.27,5.41Z"/></svg>
-                        <p>albertosoldiviero@gmail.com</p>
+                        <p>{content.myEmail}</p>
                         </a>
                     </div>
                 </div>
 
                     <form className="contactBox2 d-flex flex-column justify-content-center" id='form' autoComplete="off" ref={form} onSubmit={sendEmail}>
 
-                            <label className="myLabel" htmlFor="name">NAME</label>
+                            <label className="myLabel" htmlFor="name">{content.nameLabel}</label>
                             <input type="text"
                             id="name"
                             name="user_name"
@@ -85,7 +86,7 @@ const ContactMe = () =>{
                             className={`myForm emailForm col-11 col-lg-9 ${name === true ? "nameValid" : "nameNotValid"}`}
                             required/>
 
-                            <label className="myLabel" htmlFor="email">EMAIL</label>
+                            <label className="myLabel" htmlFor="email">{content.emailLabel}</label>
                             <input type="email"
                             id="email"
                             name="user_email"
@@ -93,13 +94,13 @@ const ContactMe = () =>{
                             className={`myForm emailForm col-11 col-lg-9 ${email === true ? "emailValid" : "emailNotValid"}`}
                             required/>
 
-                            <label className="myLabel" htmlFor="message">MESSAGE</label>
+                            <label className="myLabel" htmlFor="message">{content.messageLabel}</label>
                             <textarea id="message"
                             name="message"
                             className="myForm col-11 col-lg-9 "
                             required/>
 
-                            <input className="sendButton col-6 col-md-5 col-lg-3 mt-5 mb-5 mb-md-0 bg-dark align-self-center align-self-md-start" type="submit" value="Send" onClick={checkValidity} />
+                            <input className="sendButton col-6 col-md-5 col-lg-3 mt-5 mb-5 mb-md-0 bg-dark align-self-center align-self-md-start" type="submit" value={content.buttonLabel} onClick={checkValidity} />
 
                     </form>
 
@@ -107,12 +108,10 @@ const ContactMe = () =>{
 
     <Modal show={show} onHide={() => setShow(false)}>
         <div className='d-flex justify-content-center p-3 mt-3'>
-          <Modal.Title>Messaggio inviato con successo!</Modal.Title>
+          <Modal.Title>{content.modalText}</Modal.Title>
         </div>
         <div className='d-flex justify-content-center p-3 mb-3'>
-          <button className='closeModalButton' onClick={resetForm}>
-            Close!
-          </button>
+          <button className='closeModalButton' onClick={resetForm}>{content.modalButton}</button>
         </div>
       </Modal>
 

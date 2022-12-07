@@ -28,9 +28,9 @@ const MyNav = (props) =>{
                     <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={ expanded ? () => setExpanded(false) : () => setExpanded(true)}/>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-lg-auto">
-                            <a className="navLink px-2" href="#about" onClick={() => setExpanded(false)}>{content.navLink.about}</a>
-                            <a className="navLink px-2" href="#work" onClick={() => setExpanded(false)}>{content.navLink.work}</a>
-                            <a className="navLink px-2" href="#contact" onClick={() => setExpanded(false)}>{content.navLink.contact}</a>
+                            <a className="navLink px-2" href="#about" onClick={() => setExpanded(false)}>{content.about}</a>
+                            <a className="navLink px-2" href="#work" onClick={() => setExpanded(false)}>{content.work}</a>
+                            <a className="navLink px-2" href="#contact" onClick={() => setExpanded(false)}>{content.contact}</a>
                             <select id="Lenguage"
                             onChange={selectLenguage}
                             >

@@ -3,13 +3,17 @@ import { Carousel } from "react-bootstrap";
 
 const CarouselItems = (props) =>{
 
-
     return (
         <>
             <div className="overlay">
                 <img
-                    className="d-block w-100"
-                    src={props.img}
+                    className="d-block d-lg-none w-100"
+                    src={props.imgMobile}
+                    alt={props.alt}
+                />
+                <img
+                    className="d-none d-lg-block w-100"
+                    src={props.img} 
                     alt={props.alt}
                 />
             </div>
@@ -17,7 +21,7 @@ const CarouselItems = (props) =>{
                 <p className="itemsTitle">{props.title}</p>
                 <p className="itemsDescription">{props.subTitle}</p>
                 <hr />
-                <a className="visitLink" href={props.link}>Visit website</a>
+                <a className="visitLink" href={props.link}>{props.linkLabel}</a>
             </Carousel.Caption>
         </>
     )
