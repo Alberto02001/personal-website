@@ -9,21 +9,23 @@
   },
   "about": {
     "aboutTitle": "ABOUT",
-    "aboutDescription": "Sono Alberto, a passionate freelancer bringing you programming and design from the future. I am experienced in developing web and desktop applications including full front end design. This includes brand identity, graphics and illustrations.",
+    "aboutDescription": "Sono Alberto, uno sviluppatore front-end con molta passione, volgia di migliorare e imparare nuove tecnologie. Ho esperianza in sviluppo front-end utilizzando framework come Angular e React. Ho anche delle basi di grafica con programmi come photoshop e illustrator.",
     "skillsTitle": "Competenze",
-    "skills": ["HTML", "CSS", "JS", "Angular", "React"]
+    "skills": ["HTML", "CSS", "JS", "Angular", "React"],
+    "CVbutton": "Apri il CV",
+    "CVlink": "CV/CV-ita Alberto Soldiviero.pdf"
   },
   "myWork": {
     "workTitle": "Lavori",
     "workDescription": "Scopri i miei lavori!",
     "works": [
         {
-            "title": "In arrivo",
-            "subTitle": "Nuovi lavori presto in arrivo",
-            "link": "",
-            "linkLabel":"",
-            "img":"img/work-bg/comingSoon.jpg",
-            "imgMobile":"img/work-bg/mobile-comingSoon.jpg",
+            "title": "AlbertoSoldiviero",
+            "subTitle": "Il mio sito personale, realizzato in React.",
+            "link": "https://github.com/Alberto02001/personal-website.git",
+            "linkLabel":"Codice sorgente",
+            "img":"img/work-bg/myWebSite.jpg",
+            "imgMobile":"img/work-bg/myWebSite-mobile.jpg",
             "alt":"prima-slide"
         },
         {
@@ -33,7 +35,7 @@
             "linkLabel":"",
             "img":"img/work-bg/comingSoon.jpg",
             "imgMobile":"img/work-bg/mobile-comingSoon.jpg",
-            "alt":"prima-slide"
+            "alt":"seconda-slide"
         }
       ]
   },

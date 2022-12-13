@@ -19,6 +19,7 @@ const About = (props) =>{
                     <div className="d-flex flex-column justify-content-center">
                         <p className="skillsTitle">{content.skillsTitle}</p>
                         {content.skills.map(skill => <p className="skillsContent">{skill}</p>)}
+                        <a href={content.CVlink} className="CVbutton align mt-5">{content.CVbutton}</a>
                      </div>
                 </div>
             </div>

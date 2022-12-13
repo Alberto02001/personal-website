@@ -28,27 +28,31 @@
     a{
         color: $white;
     }
-    a:hover{
-        color: $silver;
-    }
     #logo{
         color: $white;
         font-size: small;
     }
     select{
+        -webkit-appearance: none;
         background-color: transparent;
-        font-size: small;
+        border: 1px solid $white;
+        color: $white;
+        font-size: 14px;
         font-weight: 800;
-        max-width: 60px;
-        padding: 5px;
-        margin: 10px;
+        text-align: center;
         align-self: center;
+        cursor: pointer;
         @include media-breakpoint-up(md) {
-            margin-left: 25px;
+            margin-left: 15px;
         }
         @include media-breakpoint-down(md) {
-            margin-bottom: 40px;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
+    }
+    select:hover{
+        background-color: $white;
+        color: $black;
     }
     option{
         color: black;
@@ -71,6 +75,10 @@
     font-size: small;
     padding: 5px;
     margin: 10px;
+}
+
+.navLink:hover{
+    text-decoration: underline;
 }
 
 // hero
@@ -167,6 +175,7 @@
         height: -webkit-calc(100vh);
         height: -moz-calc(100vh);
         height: calc(100vh);
+        min-height: 600px;
         width: 70%;
         padding-right: 180px;
         background-image: url("../../public/img/image/about-bg-top-right.png"), url("../../public/img/image/about-bg-down-left.png"),;
@@ -176,6 +185,26 @@
         animation: aboutFirstAnimation 3s;
         animation-iteration-count: infinite;
     }
+}
+
+.CVbutton{
+    background-color: $white;
+    color: $dark-gray;
+    border: 2px solid $dark-gray;
+    width: 150px;
+    align-self: flex-end;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.3s;
+}
+
+.CVbutton:hover{
+    background-color: $dark-gray;
+    color: $white;
+    border-radius: 15px;
+    transition: all 0.3s;
 }
 
 @keyframes aboutFirstAnimation {
@@ -211,6 +240,7 @@
         height: -webkit-calc(100vh);
         height: -moz-calc(100vh);
         height: calc(100vh);
+        min-height: 600px;
         width: 30%;
         background-image: none;
     }
@@ -278,6 +308,15 @@
     right: 0;
     background: black;
     opacity: 0.6;
+}
+
+@include media-breakpoint-down(md){
+    .carousel-control-next-icon{
+        width: 40% !important;
+    }
+    .carousel-control-prev-icon{
+        width: 40% !important;
+    }
 }
 
 .itemsContainer {
@@ -362,6 +401,7 @@
         height: -webkit-calc(100vh);
         height: -moz-calc(100vh);
         height: calc(100vh);
+        min-height: 600px;
         width: 50%;
     }
 }
@@ -375,6 +415,7 @@
         height: -webkit-calc(100vh);
         height: -moz-calc(100vh);
         height: calc(100vh);
+        min-height: 600px;
         width: 50%;
     }
 }
@@ -578,5 +619,4 @@ input, select, textarea{
     .discord{
         background-image: url("../../public/img/icons/discord-icon.png");
     }
-
 }

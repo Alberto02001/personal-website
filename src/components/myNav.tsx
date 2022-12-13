@@ -9,14 +9,14 @@ const MyNav = (props) =>{
     props.onSelectLanguage(selectedLaguage); 
     
     const change = () => {
-      if (window.scrollY >= 600) setNav(true);
+      if (window.scrollY >= 500) setNav(true);
       else setNav(false);
     };
   
     window.addEventListener("scroll", change);
 
     const selectLenguage = (e : any) => {
-        e.target.value === "ita" ? setLanguage(true) : setLanguage(false)
+        e.target.value === "eng" ? setLanguage(true) : setLanguage(false)
         setExpanded(false)
     };
    
@@ -24,7 +24,7 @@ const MyNav = (props) =>{
         <>
             <Navbar expanded={expanded} expand="lg" className={`myNav ${nav ? "navColorScroll" : "navColor"} ${expanded ? "navCloseIcon" : "navIcon"}`}>                  
                 <Container>
-                    <Navbar.Brand id="logo" href="#home"><strong>ALBERTO</strong> SOLDIVIERO</Navbar.Brand>                    
+                    <Navbar.Brand id="logo" href="#home" onClick={() => setExpanded(false)}><strong>ALBERTO</strong> SOLDIVIERO</Navbar.Brand>                    
                     <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={ expanded ? () => setExpanded(false) : () => setExpanded(true)}/>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-lg-auto">
@@ -34,8 +34,8 @@ const MyNav = (props) =>{
                             <select id="Lenguage"
                             onChange={selectLenguage}
                             >
-                                <option value="ita">ITA</option>
                                 <option value="eng">ENG</option>
+                                <option value="ita">ITA</option>
                             </select>
                         </Nav>                            
                     </Navbar.Collapse>

@@ -9,10 +9,10 @@ import ita from '../translations/ita.json'
 import eng from '../translations/eng.json'
 
 const Home = () => {
-    const [Language, setLanguage] = useState(ita);
+    const [Language, setLanguage] = useState(eng);
 
     const handleLanguage = (langValue) => {
-        langValue ? setLanguage(ita) : setLanguage(eng)
+        langValue ? setLanguage(eng) : setLanguage(ita)
     }
 
     return(
