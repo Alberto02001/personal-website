@@ -5,24 +5,13 @@ import MyWork from "../components/work.tsx";
 import ContactMe from "../components/contactMe.tsx";
 import MyFooter from "../components/footer.tsx";
 import MyNav from "../components/myNav.tsx";
-import ita from '../translations/ita.json'
-import eng from '../translations/eng.json'
 
-const Home = () => {
-    const [Language, setLanguage] = useState(eng);
+const Home = (props) => {
+    const ita = props.ita
+    const eng = props.eng
 
-    const getEng = () => {
-        fetch("translations/eng.json")
-        .then((response) => response.json())
-        .then((response) => console.log(response))
-    }
-
-    const getIta = () => {
-        fetch("translations/ita.json")
-        .then((response) => response.json())
-        .then((response) => console.log(response))
-    }
-
+    const [language, setLanguage] = useState(eng);
+    
     const handleLanguage = (langValue) => {
         langValue ? setLanguage(eng) : setLanguage(ita)
     }
@@ -30,12 +19,12 @@ const Home = () => {
 
     return(
         <>
-        <MyNav onSelectLanguage={handleLanguage} content={Language.navLink}/>
-        <HeroHome content={Language.hero}/>       
-        <About content={Language.about}/>
-        <MyWork content={Language.myWork}/>
-        <ContactMe content={Language.contact}/>
-        <MyFooter content={Language.navLink}/>
+        <MyNav onSelectLanguage={handleLanguage} content={language.navLink}/>
+        <HeroHome content={language.hero}/>       
+        <About content={language.about}/>
+        <MyWork content={language.myWork}/>
+        <ContactMe content={language.contact}/>
+        <MyFooter content={language.navLink}/>
         </>
     )
 }
