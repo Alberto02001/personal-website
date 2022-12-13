@@ -11,9 +11,22 @@ import eng from '../translations/eng.json'
 const Home = () => {
     const [Language, setLanguage] = useState(eng);
 
+    const getEng = () => {
+        fetch("translations/eng.json")
+        .then((response) => response.json())
+        .then((response) => console.log(response))
+    }
+
+    const getIta = () => {
+        fetch("translations/ita.json")
+        .then((response) => response.json())
+        .then((response) => console.log(response))
+    }
+
     const handleLanguage = (langValue) => {
         langValue ? setLanguage(eng) : setLanguage(ita)
     }
+
 
     return(
         <>

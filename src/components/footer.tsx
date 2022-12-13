@@ -18,7 +18,7 @@ const MyFooter = (props) =>{
                 </div>
                 <div className="d-flex justify-content-center mt-3">
                     <a href="https://github.com/Alberto02001" className="footerButton github"></a>
-                    <a href="https://discordapp.com/Alberto01/#3185" className="footerButton discord"></a>
+                    <a href="https://wa.me/+393920743299" className="footerButton whatsapp"></a>
                     <a href='https://www.linkedin.com/in/alberto-soldiviero-224914207/' className="footerButton linkedin"></a>
                 </div>
                 <div className="d-flex justify-content-center justify-content-md-start">
