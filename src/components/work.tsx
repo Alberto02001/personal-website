@@ -1,6 +1,6 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
-// @ts-ignore
+import { Animate } from "../animation.tsx";
 import CarouselItems from "./carouselItems.tsx";
 
 const MyWork = (props) =>{
@@ -10,9 +10,14 @@ const MyWork = (props) =>{
         <>  
             <a name="work"></a>
             <div className="d-flex flex-column align-items-center justify-content-center workTitleBox">
+                <Animate.FadeUp>
                 <p className="mt-5 workTitle">{content.workTitle}</p>
+                </Animate.FadeUp>
+                <Animate.FadeUp>
                 <p className="mt-1 workSubTitle">{content.workDescription}</p>
+                </Animate.FadeUp>
             </div>
+            <Animate.FadeIn>
             <Carousel indicators={false} interval={null} >
                 {content.works.map(item =>
                     <Carousel.Item>
@@ -20,6 +25,7 @@ const MyWork = (props) =>{
                     </Carousel.Item>
                 )}
             </Carousel>
+            </Animate.FadeIn>
         </>
     )
 }

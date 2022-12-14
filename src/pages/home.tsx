@@ -19,12 +19,16 @@ const Home = (props) => {
 
     return(
         <>
+        <div className="scrollBack2">
         <MyNav onSelectLanguage={handleLanguage} content={language.navLink}/>
-        <HeroHome content={language.hero}/>       
+        <HeroHome content={language.hero}/>     
+        <div className="scrollBack">
         <About content={language.about}/>
         <MyWork content={language.myWork}/>
         <ContactMe content={language.contact}/>
         <MyFooter content={language.navLink}/>
+        </div>
+        </div>       
         </>
     )
 }

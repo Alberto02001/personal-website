@@ -14,7 +14,7 @@ const HeroHome = (props) =>{
 
     return (
         <>        
-        <Container className={`bg-primary d-flex flex-column justify-content-center align-items-center ${back ? "heroOnScroll" : "hero"}`} fluid>
+        <Container className="bg-primary d-flex flex-column justify-content-center align-items-center hero" fluid>
                 <h1 className={`heroTitle ${back ? "d-none" : ""}`}>{content.title.map(name => <p>{name}</p>)}</h1>
                 <a href="#about" className={`heroButton align-self-center ${back ? "d-none" : ""}`}></a>
         </Container>

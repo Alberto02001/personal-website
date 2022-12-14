@@ -91,18 +91,7 @@
     background-image: url("../../public/img/image/blue-background.gif");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    @include media-breakpoint-up(lg) {
-    }
 }
-
-.heroOnScroll{
-    position: fixed;
-    height: -webkit-calc(100vh);
-    height: -moz-calc(100vh);
-    height: calc(100vh);
-    background-color: $black;
-}
-
 
 .heroTitle{
     font-size: 45px;
@@ -145,22 +134,22 @@
     background-size: 40px !important;
 }
 
-// aboutPage
+//scroll background
 
-.blackScrollBack{
-    background-color: black;
+.scrollBack2{
+    position: relative;
+    background-color: $black;
 }
 
-.positionScrollPage{
+.scrollBack{
     position: relative;
     top: -webkit-calc(100vh);
     top: -moz-calc(100vh);
     top: calc(100vh);
     background-color: $black;
-    height: -webkit-calc(100vh);
-    height: -moz-calc(100vh);
-    height: calc(100vh);
 }
+
+// aboutPage
 
 .aboutBack{
     position: relative;
@@ -191,12 +180,14 @@
     background-color: $white;
     color: $dark-gray;
     border: 2px solid $dark-gray;
-    width: 150px;
     align-self: flex-end;
     text-decoration: none;
     text-align: center;
     border-radius: 10px;
-    padding: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 30px;
+    padding-left: 30px;
     transition: all 0.3s;
 }
 
@@ -247,9 +238,9 @@
 }
 
 @keyframes aboutSecondAnimationMobile {
-    0%   {background-size: 50% 100%;}
-    50%  {background-size: 60% 100%;}
-    100% {background-size: 50% 100%;}
+    0%   {background-size: 40% 100%;}
+    50%  {background-size: 50% 100%;}
+    100% {background-size: 40% 100%;}
 }
 
 .skillsTitle{
@@ -517,7 +508,6 @@ input, select, textarea{
 
 .nameValid{    
     background-image: url("../../public/img/icons/user-green.png");
-    z-index: 10;
 }
 
 .emailForm{
@@ -537,7 +527,10 @@ input, select, textarea{
 
 .sendButton{
     border-radius: 10px;
-    padding: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 40px;
+    padding-left: 40px;
     transition: all 0.3s;
 }
 

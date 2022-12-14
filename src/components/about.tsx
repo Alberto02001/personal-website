@@ -1,29 +1,37 @@
 import React from "react";
+import { Animate } from "../animation.tsx";
 
 const About = (props) =>{
     const content = props.content
 
     return (
         <>
-        <div className="blackScrollBack">
-            <div className="positionScrollPage"></div>
             <a name="about"></a>
             <div className="d-flex flex-column flex-md-row aboutBack">
                 <div className="d-flex aboutBox">
                     <div className="d-flex flex-column justify-content-center mt-4 mt-md-0">
-                        <p className="aboutTitle">{content.aboutTitle}</p>
-                        <p className="aboutContent">{content.aboutDescription}</p>
+                        <Animate.FadeUp>
+                            <p className="aboutTitle">{content.aboutTitle}</p>
+                        </Animate.FadeUp> 
+                        <Animate.FadeIn> 
+                            <p className="aboutContent">{content.aboutDescription}</p>
+                        </Animate.FadeIn>    
                     </div>
                 </div>
                 <div className="d-flex skillsBox justify-content-end">
                     <div className="d-flex flex-column justify-content-center">
-                        <p className="skillsTitle">{content.skillsTitle}</p>
-                        {content.skills.map(skill => <p className="skillsContent">{skill}</p>)}
-                        <a href={content.CVlink} className="CVbutton align mt-5">{content.CVbutton}</a>
+                        <Animate.FadeIn>
+                            <p className="skillsTitle">{content.skillsTitle}</p>
+                        </Animate.FadeIn> 
+                        {content.skills.map(skill => <Animate.FadeUp><p className="skillsContent">{skill}</p></Animate.FadeUp>)}
+                        <div className="mt-5 align-self-end">
+                            <Animate.FadeIn>
+                                <a href={content.CVlink} className="CVbutton">{content.CVbutton}</a>
+                            </Animate.FadeIn>
+                        </div>
                      </div>
                 </div>
             </div>
-        </div>
         </>
     )
 }
