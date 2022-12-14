@@ -10,9 +10,9 @@ const About = (props) =>{
             <div className="d-flex flex-column flex-md-row aboutBack">
                 <div className="d-flex aboutBox">
                     <div className="d-flex flex-column justify-content-center mt-4 mt-md-0">
-                        <Animate.FadeUp>
+                        <Animate.FadeIn>
                             <p className="aboutTitle">{content.aboutTitle}</p>
-                        </Animate.FadeUp> 
+                        </Animate.FadeIn> 
                         <Animate.FadeIn> 
                             <p className="aboutContent">{content.aboutDescription}</p>
                         </Animate.FadeIn>    

@@ -15,6 +15,11 @@ const MyNav = (props) =>{
   
     window.addEventListener("scroll", change);
 
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0});
+        setExpanded(false)
+    }
+
     const selectLenguage = (e : any) => {
         e.target.value === "eng" ? setLanguage(true) : setLanguage(false)
         setExpanded(false)
@@ -24,7 +29,7 @@ const MyNav = (props) =>{
         <>
             <Navbar expanded={expanded} expand="lg" className={`myNav ${nav ? "navColorScroll" : "navColor"} ${expanded ? "navCloseIcon" : "navIcon"}`}>                  
                 <Container>
-                    <Navbar.Brand id="logo" href="#home" onClick={() => setExpanded(false)}><strong>ALBERTO</strong> SOLDIVIERO</Navbar.Brand>                    
+                    <Navbar.Brand id="logo" onClick={scrollToTop}><strong>ALBERTO</strong> SOLDIVIERO</Navbar.Brand>                    
                     <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={ expanded ? () => setExpanded(false) : () => setExpanded(true)}/>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-lg-auto">
@@ -41,6 +46,7 @@ const MyNav = (props) =>{
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+            
         </>
     )
 }

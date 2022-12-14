@@ -10,10 +10,11 @@ import React, {
   
   function useElementOnScreen(ref: RefObject<Element>, rootMargin = "0px") {
     const [isIntersecting, setIsIntersecting] = useState(true);
+
     useEffect(() => {
       const observer = new IntersectionObserver(
         ([entry]) => {
-          setIsIntersecting(entry.isIntersecting);
+          setIsIntersecting(entry.isIntersecting)
         },
         { rootMargin }
       );
@@ -30,13 +31,14 @@ import React, {
   }
   
   const AnimateIn: FC<
-    PropsWithChildren<{ from: CSSProperties; to: CSSProperties }>
+    PropsWithChildren<{ from: CSSProperties; to: CSSProperties } >
   > = ({ from, to, children }) => {
     const ref = useRef<HTMLDivElement>(null);
     const onScreen = useElementOnScreen(ref);
     const defaultStyles: CSSProperties = {
-      transition: "400ms ease-in-out"
+      transition: "500ms ease-in-out"
     };
+
     return (
       <div
         ref={ref}

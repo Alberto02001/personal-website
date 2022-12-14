@@ -19,7 +19,7 @@ const Home = (props) => {
 
     return(
         <>
-        <div className="scrollBack2">
+        <div className="back">
         <MyNav onSelectLanguage={handleLanguage} content={language.navLink}/>
         <HeroHome content={language.hero}/>     
         <div className="scrollBack">
