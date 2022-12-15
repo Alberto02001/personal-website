@@ -179,11 +179,10 @@
 
 .CVbutton{
     background-color: $white;
-    color: $dark-gray;
     border: 2px solid $dark-gray;
-    align-self: flex-end;
-    text-decoration: none;
     text-align: center;
+    color: $dark-gray;
+    text-decoration: none;
     border-radius: 10px;
     padding-top: 12px;
     padding-bottom: 12px;
@@ -194,9 +193,9 @@
 
 .CVbutton:hover{
     background-color: $dark-gray;
-    color: $white;
     border-radius: 15px;
     transition: all 0.3s;
+    color: $white;
 }
 
 @keyframes aboutFirstAnimation {

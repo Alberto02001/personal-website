@@ -26,7 +26,7 @@ const About = (props) =>{
                         {content.skills.map(skill => <Animate.FadeUp><p className="skillsContent">{skill}</p></Animate.FadeUp>)}
                         <div className="mt-5 align-self-end">
                             <Animate.FadeIn>
-                                <a href={content.CVlink} className="CVbutton">{content.CVbutton}</a>
+                                <a href={content.CVlink}><button className="CVbutton">{content.CVbutton}</button></a>
                             </Animate.FadeIn>
                         </div>
                      </div>
