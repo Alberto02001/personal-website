@@ -226,7 +226,7 @@
     background-color: $dark-gray;
     position: absolute;
     top: 10px;
-    left: 10px;
+    left: 39%;
     box-shadow: -5px -5px 9px rgba(15, 15, 15, 0.45), 5px 5px 9px rgba(51, 57, 65, 0.3);
     animation: bgAboutAimation 8s;
     animation-iteration-count: infinite;
@@ -236,7 +236,7 @@
     background-color: $dark-gray;
     position: absolute;
     bottom: 10px;
-    left: 39%;
+    left: 10px;
     box-shadow: -5px -5px 9px rgba(51, 57, 65, 0.45), 5px 5px 9px rgba(15, 15, 15, 0.3);
     animation: bgAboutAimation 8s;
     animation-iteration-count: infinite;
@@ -366,7 +366,7 @@
     left: 0;
     right: 0;
     background: black;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 @include media-breakpoint-down(md){

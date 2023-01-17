@@ -20,22 +20,22 @@
     "workDescription": "Discover my works!",
     "works": [
       {
-        "title": "AlbertoSoldiviero",
-        "subTitle": "My personal web-site, made with React.",
-        "link": "https://github.com/Alberto02001/personal-website.git",
-        "linkLabel":"Source code",
-        "img":"img/work-bg/myWebSite.jpg",
-        "imgMobile":"img/work-bg/myWebSite-mobile.jpg",
-        "alt":"first-slide"
+        "title": "infoMovie",
+        "subTitle": "A web-site built in Angular showing information about movies and tv shows.",
+        "link": "https://alberto02001.github.io/infoMovie/",
+        "linkLabel":"View web-site",
+        "img":"img/work-bg/infoMovie.jpg",
+        "imgMobile":"img/work-bg/infoMovie-mobile.jpg",
+        "alt":"first slide"
       },
       {
-        "title": "Coming soon",
-        "subTitle": "New works coming soon",
-        "link": "",
-        "linkLabel":"",
-        "img":"img/work-bg/comingSoon.jpg",
-        "imgMobile":"img/work-bg/mobile-comingSoon.jpg",
-        "alt":"second-slide"
+        "title": "This web-site",
+        "subTitle": "My personal web-site, made with React.",
+        "link": "https://github.com/Alberto02001/personal-website.git",
+        "linkLabel":"View code",
+        "img":"img/work-bg/myWebSite.jpg",
+        "imgMobile":"img/work-bg/myWebSite-mobile.jpg",
+        "alt":"second slide"
       }
     ]
   },
