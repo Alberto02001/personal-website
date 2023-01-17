@@ -1,0 +1,54 @@
+{
+  "navLink": {
+    "about": "ABOUT",
+    "work": "LAVORI",
+    "contact": "CONTATTI"
+  },
+  "hero": {
+    "title": ["Ciao.", "Sono Alberto,", "Web Developer"]
+  },
+  "about": {
+    "aboutTitle": "ABOUT",
+    "aboutDescription": "Sono Alberto, uno sviluppatore front-end con molta passione, voglia di migliorare e imparare nuove tecnologie. Ho esperianza in sviluppo front-end utilizzando framework come Angular e React. Ho anche delle basi di grafica con programmi come photoshop e illustrator.",
+    "skillsTitle": "Competenze",
+    "skills": ["Angular", "React", "HTML", "CSS", "JS"],
+    "CVbutton": "Apri il CV",
+    "CVlink": "CV/CV-itaAlbertoSoldiviero.pdf"
+  },
+  "myWork": {
+    "workTitle": "Lavori",
+    "workDescription": "Scopri i miei lavori!",
+    "works": [
+        {
+          "title": "infoMovie",
+          "subTitle": "Un sito realizzato in Angular che mostra informazioni a proposito di film e serie tv.",
+          "link": "https://alberto02001.github.io/infoMovie/",
+          "linkLabel":"Visita il sito",
+          "img":"img/work-bg/infoMovie.jpg",
+          "imgMobile":"img/work-bg/infoMovie-mobile.jpg",
+          "alt":"prima slide"
+        },
+        {
+          "title": "Questo sito",
+          "subTitle": "Il mio sito personale, realizzato in React.",
+          "link": "https://github.com/Alberto02001/personal-website.git",
+          "linkLabel":"Guarda il codice",
+          "img":"img/work-bg/myWebSite.jpg",
+          "imgMobile":"img/work-bg/myWebSite-mobile.jpg",
+          "alt":"seconda slide"
+      }
+      ]
+  },
+  "contact": {
+    "contactLabel":"CONTATTI",
+    "contactTitle": "Hai qualche domanda?",
+    "contactDescription": "Per qualsiasi domanda o dubbio contattami pure subito, cercherò di risponderti il prima possibile.",
+    "myEmail": "albertosoldiviero@gmail.com",
+    "nameLabel": "NOME",
+    "emailLabel": "EMAIL",
+    "messageLabel": "MESSAGGIO",
+    "buttonLabel": "Invia",
+    "modalText": "Messaggio inviato con successo!",
+    "modalButton": "Chiudi"
+  }
+}

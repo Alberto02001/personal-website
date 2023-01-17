@@ -1,0 +1,54 @@
+{
+  "navLink": {
+    "about": "ABOUT",
+    "work": "WORK",
+    "contact": "CONTACT"
+  },
+  "hero": {
+    "title": ["Hello.", "I'm Alberto,", "Web Developer"]
+  },
+  "about": {
+    "aboutTitle": "ABOUT",
+    "aboutDescription": "I'm Alberto, a passionate front-end developer, looking to improve and learn new technologies. I have experience in front-end development using frameworks like Angular and React. I also have basic knowledge of programs like photoshop and illustrator.",
+    "skillsTitle": "My Skills",
+    "skills": ["Angular", "React", "HTML", "CSS", "JS"],
+    "CVbutton": "Open CV",
+    "CVlink": "CV/CV-engAlbertoSoldiviero.pdf"
+  },
+  "myWork": {
+    "workTitle": "Work",
+    "workDescription": "Discover my works!",
+    "works": [
+      {
+        "title": "infoMovie",
+        "subTitle": "A web-site built in Angular showing information about movies and tv shows.",
+        "link": "https://alberto02001.github.io/infoMovie/",
+        "linkLabel":"View web-site",
+        "img":"img/work-bg/infoMovie.jpg",
+        "imgMobile":"img/work-bg/infoMovie-mobile.jpg",
+        "alt":"first slide"
+      },
+      {
+        "title": "This web-site",
+        "subTitle": "My personal web-site, made with React.",
+        "link": "https://github.com/Alberto02001/personal-website.git",
+        "linkLabel":"View code",
+        "img":"img/work-bg/myWebSite.jpg",
+        "imgMobile":"img/work-bg/myWebSite-mobile.jpg",
+        "alt":"second slide"
+      }
+    ]
+  },
+  "contact": {
+    "contactLabel":"CONTACT",
+    "contactTitle": "Do you have any question?",
+    "contactDescription": "For any questions or requests, please contact me, i will try to answer your question as soon as possible.",
+    "myEmail": "albertosoldiviero@gmail.com",
+    "nameLabel": "NAME",
+    "emailLabel": "EMAIL",
+    "messaggeLabel": "MESSAGGE",
+    "buttonLabel": "Send",
+    "modalText": "The message has been sent successfully!",
+    "modalButton": "Close"
+  }
+}
