@@ -13,10 +13,12 @@ const HeroHome = (props) =>{
     window.addEventListener("scroll", change);
 
     return (
-        <>     
-        <Container className={`bg-primary d-flex flex-column justify-content-center align-items-center hero ${back ? "d-none" : ""}`} fluid>
-                <h1 className={`heroTitle ${back ? "d-none" : ""}`}>{content.title.map(name => <p>{name}</p>)}</h1>
-                <a href="#about" className={`heroButton align-self-center ${back ? "d-none" : ""}`}></a>
+        <>  
+        <Container className={`d-flex flex-column flex-md-row justify-content-center align-items-center hero ${back ? "d-none" : ""}`} fluid>
+          <div className="titleContainer d-flex flex-column justify-content-center align-items-center">
+            <h1 className={`heroTitle ${back ? "d-none" : ""}`}>{content.title.map(name => <p>{name}</p>)}</h1>
+            <a href="#about" className={`heroButton align-self-center ${back ? "d-none" : ""}`}></a>
+          </div>
         </Container>
         </>
     )

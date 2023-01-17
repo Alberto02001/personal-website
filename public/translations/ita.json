@@ -11,7 +11,7 @@
     "aboutTitle": "ABOUT",
     "aboutDescription": "Sono Alberto, uno sviluppatore front-end con molta passione, voglia di migliorare e imparare nuove tecnologie. Ho esperianza in sviluppo front-end utilizzando framework come Angular e React. Ho anche delle basi di grafica con programmi come photoshop e illustrator.",
     "skillsTitle": "Competenze",
-    "skills": ["HTML", "CSS", "JS", "Angular", "React"],
+    "skills": ["Angular", "React", "HTML", "CSS", "JS"],
     "CVbutton": "Apri il CV",
     "CVlink": "CV/CV-itaAlbertoSoldiviero.pdf"
   },

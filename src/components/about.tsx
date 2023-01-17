@@ -8,6 +8,9 @@ const About = (props) =>{
         <>
             <a name="about"></a>
             <div className="d-flex flex-column flex-md-row aboutBack">
+                <div className="top-bg-element d-none d-md-block"></div>
+                <div className="bottom-bg-element d-none d-md-block"></div>
+                <div className="sm-bg-element d-block d-md-none"></div>
                 <div className="d-flex aboutBox">
                     <div className="d-flex flex-column justify-content-center mt-4 mt-md-0">
                         <Animate.FadeIn>

@@ -27,7 +27,7 @@ const MyNav = (props) =>{
    
     return (
         <>
-            <Navbar expanded={expanded} expand="lg" className={`myNav ${nav ? "navColorScroll" : "navColor"} ${expanded ? "navCloseIcon" : "navIcon"}`}>                  
+            <Navbar expanded={expanded} expand="lg" className={`myNav ${nav ? "navOnScroll" : "staticNav"} ${expanded ? "expandedNav" : "closedNav"}`}>                  
                 <Container>
                     <Navbar.Brand id="logo" onClick={scrollToTop}><strong>ALBERTO</strong> SOLDIVIERO</Navbar.Brand>                    
                     <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={ expanded ? () => setExpanded(false) : () => setExpanded(true)}/>

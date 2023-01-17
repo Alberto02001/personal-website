@@ -2,14 +2,24 @@
 
 // navbar
 
-.navIcon{
+.closedNav{
     --bs-navbar-toggler-icon-bg: url("../../public/img/icons/burger-icon.png");
 }
 
-.navCloseIcon{
-    --bs-navbar-toggler-icon-bg: url("../../public/img/icons/close-icon.png");
+.expandedNav{
+    --bs-navbar-toggler-icon-bg: url("../../public/img/icons/close-icon.png") !important;
     @include media-breakpoint-down(md) {
         background-color: $dark-gray !important;
+        a{
+            color: $white !important;
+        }
+        #logo{
+            color: $white !important;
+        }
+        select{
+            border: 1px solid $white !important;
+            color: $white !important;
+        }
     }
 }
 
@@ -25,19 +35,13 @@
         padding-left: 20px;
         padding-right: 20px;
     }
-    a{
-        color: $white;
-    }
     #logo{
-        color: $white;
         font-size: small;
         cursor: pointer;
     }
     select{
         -webkit-appearance: none;
         background-color: transparent;
-        border: 1px solid $white;
-        color: $white;
         font-size: 14px;
         font-weight: 800;
         text-align: center;
@@ -62,12 +66,34 @@
     }
 }
 
-.navColor{
+.staticNav{
+    --bs-navbar-toggler-icon-bg: url("../../public/img/icons/burger-icon-black.png");
     background-color: transparent;
+    a{
+        color: $dark-gray;
+    }
+    #logo{
+        color: $dark-gray;
+    }
+    select{
+        border: 1px solid $dark-gray;
+        color: $dark-gray;
+    }
 }
 
-.navColorScroll{
-    background-color: rgba(0, 0, 0, 0.8);;
+.navOnScroll{
+    --bs-navbar-toggler-icon-bg: url("../../public/img/icons/burger-icon.png");
+    background-color: rgba(0, 0, 0, 0.8);
+    a{
+        color: $white;
+    }
+    #logo{
+        color: $white;
+    }
+    select{
+        border: 1px solid $white;
+        color: $white;
+    }
 }
 
 .navLink{
@@ -86,7 +112,7 @@
 
 .back{
     position: relative;
-    background-color: $black;
+    background-color: $white;
 }
 
 .scrollBack{
@@ -99,21 +125,44 @@
 
 // hero
 
+.titleContainer{
+    background: $white;
+    animation: titleAnimation 3s;
+    animation-iteration-count: infinite;
+    @include media-breakpoint-down(md) {
+        animation: mdTitleAnimation 3s;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes titleAnimation {
+    0% {box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3); border-radius: 40px; padding: 60px;}
+    50% {box-shadow: -5px -5px 15px rgba(255,255,255,0.45), 5px 5px 15px rgba(94,104,121,0.3); border-radius: 80px; padding: 100px;}
+    100% {box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3); border-radius: 40px; padding: 60px;}
+}
+@keyframes mdTitleAnimation {
+    0% {box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3); border-radius: 40px; padding: 50px 10px 50px 10px;}
+    50% {box-shadow: -5px -5px 15px rgba(255,255,255,0.45), 5px 5px 15px rgba(94,104,121,0.3); border-radius: 80px; padding: 100px 10px 100px 10px;}
+    100% {box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3); border-radius: 40px; padding: 50px 10px 50px 10px;}
+}
+
 .hero{
     position: fixed;
     height: -webkit-calc(100vh);
     height: -moz-calc(100vh);
     height: calc(100vh);
-    background-image: url("../../public/img/image/blue-background.gif");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    background-color: $white;
+    min-height: 600px;
 }
 
 .heroTitle{
     font-size: 45px;
     font-weight: bolder;
-    color: $silver;
+    color: $dark-gray;
     text-align: center;
+    @include media-breakpoint-up(md) {
+        font-size: 50px;
+    }
     @include media-breakpoint-up(md) {
         font-size: 60px;
     }
@@ -130,7 +179,7 @@
     height: 50px;
     width: 50px;
     position: relative;
-    top: 75px;
+    top: 30px;
     background-color: transparent;
     border: none;
     background-image: url("../../public/img/icons/down-arrow.png");
@@ -154,6 +203,7 @@
 
 .aboutBack{
     position: relative;
+    background-color: $dark-gray;
 }
 
 .aboutBox{
@@ -162,26 +212,63 @@
     padding: 40px;
     border: none;
     @include media-breakpoint-up(md) {
+        background-color: $dark-gray;
         height: -webkit-calc(100vh);
         height: -moz-calc(100vh);
         height: calc(100vh);
         min-height: 600px;
         width: 70%;
         padding-right: 180px;
-        background-image: url("../../public/img/image/about-bg-top-right.png"), url("../../public/img/image/about-bg-down-left.png"),;
-        background-position: top right, bottom left;
-        background-repeat: no-repeat;
-        background-size: 30%, 60%;
-        animation: aboutFirstAnimation 3s;
-        animation-iteration-count: infinite;
     }
 }
 
+.top-bg-element{
+    background-color: $dark-gray;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    box-shadow: -5px -5px 9px rgba(15, 15, 15, 0.45), 5px 5px 9px rgba(51, 57, 65, 0.3);
+    animation: bgAboutAimation 8s;
+    animation-iteration-count: infinite;
+}
+
+.bottom-bg-element{
+    background-color: $dark-gray;
+    position: absolute;
+    bottom: 10px;
+    left: 39%;
+    box-shadow: -5px -5px 9px rgba(51, 57, 65, 0.45), 5px 5px 9px rgba(15, 15, 15, 0.3);
+    animation: bgAboutAimation 8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bgAboutAimation{
+    0% {height: 20%; width: 30%; border-radius: 20px;}
+    50% {height: 30%; width: 30%; border-radius: 40px;}
+    100% {height: 20%; width: 30%; border-radius: 20px;}
+}
+
+.sm-bg-element{
+    background-color: $dark-gray;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    box-shadow: -5px -5px 9px rgba(51, 57, 65, 0.45), 5px 5px 9px rgba(15, 15, 15, 0.3);
+    animation: smBgAboutAimation 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes smBgAboutAimation{
+    0% {height: 20%; width: 20%; border-radius: 60px;}
+    50% {height: 50%; width: 38%; border-radius: 20px;}
+    100% {height: 20%; width: 20%; border-radius: 60px;}
+}
+
 .CVbutton{
-    background-color: $white;
-    border: 2px solid $dark-gray;
+    background-color: $dark-gray;
+    border: 2px solid $white;
     text-align: center;
-    color: $dark-gray;
+    color: $white;
     text-decoration: none;
     border-radius: 10px;
     padding-top: 12px;
@@ -189,69 +276,53 @@
     padding-right: 30px;
     padding-left: 30px;
     transition: all 0.3s;
+    @include media-breakpoint-up(md) {
+        background-color: $black;
+    }
 }
 
 .CVbutton:hover{
-    background-color: $dark-gray;
+    background-color: $white;
     border-radius: 15px;
     transition: all 0.3s;
-    color: $white;
-}
-
-@keyframes aboutFirstAnimation {
-    0%   {background-size: 30%, 55%;}
-    50%  {background-size: 35%, 60%;}
-    100% {background-size: 30%, 55%;}
+    color: $black;
 }
 
 .aboutTitle{
-    color: $white;
+    color: $silver;
     font-weight: 200;
     font-size: 30px;
 }
 
 .aboutContent{
-    color: $silver;
+    color: $white;
     font-weight: 400;
     font-size: 20px;
 }
 
 .skillsBox{
-    background-color: $white;
+    background-color: $dark-gray;
     width: 100%;
     padding: 40px;
-    background-image: url("../../public/img/image/about-bg-sm.png");
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: 60% 100%;
-    border: none;
-    animation: aboutSecondAnimationMobile 3s;
-    animation-iteration-count: infinite;
     @include media-breakpoint-up(md) {
+        background-color: $black;
         height: -webkit-calc(100vh);
         height: -moz-calc(100vh);
         height: calc(100vh);
         min-height: 600px;
         width: 30%;
-        background-image: none;
     }
 }
 
-@keyframes aboutSecondAnimationMobile {
-    0%   {background-size: 40% 100%;}
-    50%  {background-size: 50% 100%;}
-    100% {background-size: 40% 100%;}
-}
-
 .skillsTitle{
-    color: $black;
+    color: $silver;
     font-weight: 300;
     font-size: 30px;  
     text-align: right;
 }
 
 .skillsContent{
-    color: $black;
+    color: $white;
     margin-bottom: 3px !important;
     text-align: right;
     font-weight: 600;
@@ -263,10 +334,7 @@
 .workTitleBox{
     position: relative;
     padding: 30px;
-    background-color: $black;
-    @include media-breakpoint-up(md) {
-        background-color: black;
-    }
+    background-color: $white;
 }
 
 .workTitle{
@@ -276,7 +344,7 @@
 }
 
 .workSubTitle{
-    color: $white;
+    color: $black;
     font-weight: 300;
     font-size: 30px; 
     @include media-breakpoint-up(md) {

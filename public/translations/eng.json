@@ -11,7 +11,7 @@
     "aboutTitle": "ABOUT",
     "aboutDescription": "I'm Alberto, a passionate front-end developer, looking to improve and learn new technologies. I have experience in front-end development using frameworks like Angular and React. I also have basic knowledge of programs like photoshop and illustrator.",
     "skillsTitle": "My Skills",
-    "skills": ["HTML", "CSS", "JS", "Angular", "React"],
+    "skills": ["Angular", "React", "HTML", "CSS", "JS"],
     "CVbutton": "Open CV",
     "CVlink": "CV/CV-engAlbertoSoldiviero.pdf"
   },
