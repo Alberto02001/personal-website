@@ -35,7 +35,7 @@ function App() {
 
   return (
     <>
-    {loading ? <Home ita={ita} eng={eng}/> : <h5>error, refresh the page</h5>}
+    {loading ? <Home ita={ita} eng={eng}/> : ""}
     </>
   );
 }
