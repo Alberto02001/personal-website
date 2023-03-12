@@ -22,8 +22,10 @@ function App() {
   }
 
   useEffect(() => {
-    getEng()   
-    getIta()
+    setTimeout(() => {
+      getEng()   
+      getIta()
+    }, 100);
   }, [])
 
   const load = document.getElementById("loading");
