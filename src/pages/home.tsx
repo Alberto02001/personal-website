@@ -16,19 +16,20 @@ const Home = (props) => {
         langValue ? setLanguage(eng) : setLanguage(ita)
     }
 
-
     return(
         <>
-        <div className="back">
-        <MyNav onSelectLanguage={handleLanguage} content={language.navLink}/>
-        <HeroHome content={language.hero}/>     
-        <div className="scrollBack">
-        <About content={language.about}/>
-        <MyWork content={language.myWork}/>
-        <ContactMe content={language.contact}/>
-        <MyFooter content={language.navLink}/>
-        </div>
-        </div>       
+        {eng && ita ? 
+            <div className="back">
+            <MyNav onSelectLanguage={handleLanguage} content={language.navLink}/>
+            <HeroHome content={language.hero}/>     
+            <div className="scrollBack">
+            <About content={language.about}/>
+            <MyWork content={language.myWork}/>
+            <ContactMe content={language.contact}/>
+            <MyFooter content={language.navLink}/>
+            </div>
+            </div>  
+        : ""}
         </>
     )
 }
