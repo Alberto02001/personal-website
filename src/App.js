@@ -1,30 +1,28 @@
 import './App.scss'
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Home from './pages/home.tsx';
+import i18 from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import enJSON from './translations/eng.json'
+import itJSON from './translations/ita.json'
+
+const it = itJSON
+
+const eng = enJSON
+
+i18
+  .use(initReactI18next)
+  .init({
+    resources : {
+      en : {translation: eng},
+      it : {translation: it}
+    },
+    lng : "en",
+    fallbackLng: "en",
+    interpolation: {escapeValue: false}
+  })
 
 function App() {
-  const [eng, setEng] = useState(null);
-  const [ita, setIta] = useState(null);
-  const [loading, setLoading] = useState(false);
-
-  const getEng = () => {
-    fetch("translations/eng.json")
-    .then((response) => response.json())
-    .then((response) => setEng(response))
-    .then((response) => setLoading(true))   
-  }
-
-  const getIta = () => {
-    fetch("translations/ita.json")
-    .then((response) => response.json())
-    .then((response) => setIta(response))
-    .then((response) => setLoading(true)) 
-  }
-
-  useEffect(() => {
-    getEng()   
-    getIta()
-  }, [])
 
   const load = document.getElementById("loading");
   if (load) {
@@ -35,7 +33,7 @@ function App() {
 
   return (
     <>
-    {loading ? <Home ita={ita} eng={eng}/> : ""}
+    <Home/>
     </>
   );
 }

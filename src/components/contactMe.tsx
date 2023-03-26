@@ -2,9 +2,10 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Modal } from 'react-bootstrap';
 import { Animate } from '../animation.tsx';
+import { useTranslation } from 'react-i18next';
 
-const ContactMe = (props) =>{
-    const content = props.content   
+const ContactMe = () =>{  
+    const {t} = useTranslation()
 
     const [show, setShow] = useState(false);
 
@@ -68,18 +69,18 @@ const ContactMe = (props) =>{
                 <div className="contactBox1 d-flex justify-content-center align-items-center">
                     <div className="d-flex flex-column align-items-start col-10 col-md-8 col-lg-7 mt-5 mt-md-0">
                         <Animate.FadeUp>
-                            <p className="contactLabel mt-4 mt-md-0">{content.contactLabel}</p>
+                            <p className="contactLabel mt-4 mt-md-0">{t("contact.contactLabel")}</p>
                         </Animate.FadeUp>
                         <Animate.FadeUp>
-                            <p className="contactTitle">{content.contactTitle}</p>
+                            <p className="contactTitle">{t("contact.contactTitle")}</p>
                         </Animate.FadeUp>
                         <Animate.FadeUp>
-                            <p className="contactDescription">{content.contactDescription}</p>
+                            <p className="contactDescription">{t("contact.contactDescription")}</p>
                         </Animate.FadeUp>
                         <Animate.FadeIn>
                             <a className="emailLink d-flex" href="mailto: albertosoldiviero@gmail.com">
                                 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 88.86"><title>email</title><path d="M7.05,0H115.83a7.07,7.07,0,0,1,7,7.05V81.81a7,7,0,0,1-1.22,4,2.78,2.78,0,0,1-.66,1,2.62,2.62,0,0,1-.66.46,7,7,0,0,1-4.51,1.65H7.05a7.07,7.07,0,0,1-7-7V7.05A7.07,7.07,0,0,1,7.05,0Zm-.3,78.84L43.53,40.62,6.75,9.54v69.3ZM49.07,45.39,9.77,83.45h103L75.22,45.39l-11,9.21h0a2.7,2.7,0,0,1-3.45,0L49.07,45.39Zm31.6-4.84,35.46,38.6V9.2L80.67,40.55ZM10.21,5.41,62.39,47.7,112.27,5.41Z"/></svg>
-                                <p>{content.myEmail}</p>
+                                <p>{t("contact.myEmail")}</p>
                             </a>
                         </Animate.FadeIn>
                     </div>
@@ -88,7 +89,7 @@ const ContactMe = (props) =>{
                 <form className="contactBox2 d-flex flex-column justify-content-center" id='form' autoComplete="off" ref={form} onSubmit={sendEmail}>
                         <Animate.FadeUp>
                             <div className='d-flex flex-column col-11 col-lg-9'>                           
-                                <label className="myLabel" htmlFor="name">{content.nameLabel}</label>
+                                <label className="myLabel" htmlFor="name">{t("contact.nameLabel")}</label>
                                 <input type="text"
                                 id="name"
                                 name="user_name"
@@ -100,7 +101,7 @@ const ContactMe = (props) =>{
 
                         <Animate.FadeUp>
                             <div className='d-flex flex-column col-11 col-lg-9'> 
-                                <label className="myLabel" htmlFor="email">{content.emailLabel}</label>
+                                <label className="myLabel" htmlFor="email">{t("contact.emailLabel")}</label>
                                 <input type="email"
                                 id="email"
                                 name="user_email"
@@ -112,7 +113,7 @@ const ContactMe = (props) =>{
                             
                         <Animate.FadeUp>
                             <div className='d-flex flex-column mt-3 col-11 col-lg-9'> 
-                                <label className="myLabel" htmlFor="message">{content.messageLabel}</label>
+                                <label className="myLabel" htmlFor="message">{t("contact.messageLabel")}</label>
                                 <textarea id="message"
                                 name="message"
                                 className="myForm"
@@ -121,7 +122,7 @@ const ContactMe = (props) =>{
                         </Animate.FadeUp>
                         <div className='mt-5 mb-5 mb-md-0 align-self-center align-self-md-start'>
                         <Animate.FadeUp>
-                            <input className="sendButton bg-dark" type="submit" value={content.buttonLabel} onClick={checkValidity} />                       
+                            <input className="sendButton bg-dark" type="submit" value={t("contact.buttonLabel")} onClick={checkValidity} />                       
                         </Animate.FadeUp>
                         </div>
                 </form>
@@ -129,10 +130,10 @@ const ContactMe = (props) =>{
 
             <Modal show={show} onHide={() => setShow(false)}>
                 <div className='d-flex justify-content-center p-3 mt-3'>
-                    <Modal.Title>{content.modalText}</Modal.Title>
+                    <Modal.Title>{t("contact.modalText")}</Modal.Title>
                 </div>
                 <div className='d-flex justify-content-center p-3 mb-3'>
-                    <button className='closeModalButton' onClick={resetForm}>{content.modalButton}</button>
+                    <button className='closeModalButton' onClick={resetForm}>{t("contact.modalButton")}</button>
                 </div>
             </Modal>
 

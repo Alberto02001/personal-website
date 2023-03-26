@@ -46,7 +46,7 @@
     "myEmail": "albertosoldiviero@gmail.com",
     "nameLabel": "NAME",
     "emailLabel": "EMAIL",
-    "messaggeLabel": "MESSAGGE",
+    "messageLabel": "MESSAGGE",
     "buttonLabel": "Send",
     "modalText": "The message has been sent successfully!",
     "modalButton": "Close"

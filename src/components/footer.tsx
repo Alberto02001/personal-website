@@ -1,8 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Animate } from "../animation.tsx";
 
-const MyFooter = (props) =>{
-    const content = props.content
+const MyFooter = () =>{
+    const {t} = useTranslation()
 
     return (
         <>
@@ -12,9 +13,9 @@ const MyFooter = (props) =>{
                     <div className="d-flex flex-column align-items-center">
                         <hr />
                         <div className="d-flex">
-                            <a href="#about">{content.about}</a>
-                            <a href="#work">{content.work}</a>
-                            <a href="#contact">{content.contact}</a>
+                            <a href="#about">{t("navLink.about")}</a>
+                            <a href="#work">{t("navLink.work")}</a>
+                            <a href="#contact">{t("navLink.contact")}</a>
                         </div>
                         <hr />
 
