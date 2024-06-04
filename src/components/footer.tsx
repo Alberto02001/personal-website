@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Animate } from "../animation.tsx";
+import { Animate } from "../animation";
 
 const MyFooter = () =>{
     const {t} = useTranslation()

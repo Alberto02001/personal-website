@@ -1,10 +1,10 @@
 import React from "react";
-import HeroHome from "../components/heroHome.tsx";
-import About from "../components/about.tsx";
-import MyWork from "../components/work.tsx";
-import ContactMe from "../components/contactMe.tsx";
-import MyFooter from "../components/footer.tsx";
-import MyNav from "../components/myNav.tsx";
+import HeroHome from "../components/heroHome";
+import About from "../components/about";
+import MyWork from "../components/work";
+import ContactMe from "../components/contactMe";
+import MyFooter from "../components/footer";
+import MyNav from "../components/myNav";
 
 const Home = () => {
 

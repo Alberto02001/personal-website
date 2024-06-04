@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Modal } from 'react-bootstrap';
-import { Animate } from '../animation.tsx';
+import { Animate } from '../animation';
 import { useTranslation } from 'react-i18next';
 
 const ContactMe = () =>{  
@@ -14,9 +14,10 @@ const ContactMe = () =>{
 
     const form = useRef();
 
-    const sendEmail = (e) => {
+    const sendEmail = (e: any) => {
       e.preventDefault();
   
+      // @ts-ignore
       emailjs.sendForm('service_bu6xor7', 'template_n5781p8', form.current, '8yAkRGjksM7gOParV')
         .then((result) => {
             console.log(result.text);
@@ -55,6 +56,7 @@ const ContactMe = () =>{
 
     const resetForm = () =>{
         const formContent = (document.getElementById("form") as HTMLInputElement);
+        // @ts-ignore
         formContent.reset()             
         checkName()
         checkEmail()
@@ -64,7 +66,7 @@ const ContactMe = () =>{
 
     return (
         <>
-            <a name="contact"></a>
+            <a id="contact"></a>
             <div className="d-flex flex-column flex-md-row contactBack">
                 <div className="contactBox1 d-flex justify-content-center align-items-center">
                     <div className="d-flex flex-column align-items-start col-10 col-md-8 col-lg-7 mt-5 mt-md-0">
@@ -86,7 +88,7 @@ const ContactMe = () =>{
                     </div>
                 </div>
                 
-                <form className="contactBox2 d-flex flex-column justify-content-center" id='form' autoComplete="off" ref={form} onSubmit={sendEmail}>
+                <form className="contactBox2 d-flex flex-column justify-content-center" id='form' autoComplete="off" ref={form as any} onSubmit={sendEmail}>
                         <Animate.FadeUp>
                             <div className='d-flex flex-column col-11 col-lg-9'>                           
                                 <label className="myLabel" htmlFor="name">{t("contact.nameLabel")}</label>
@@ -122,7 +124,7 @@ const ContactMe = () =>{
                         </Animate.FadeUp>
                         <div className='mt-5 mb-5 mb-md-0 align-self-center align-self-md-start'>
                         <Animate.FadeUp>
-                            <input className="sendButton bg-dark" type="submit" value={t("contact.buttonLabel")} onClick={checkValidity} />                       
+                            <input className="sendButton bg-dark" type="submit" value={t("contact.buttonLabel") as string} onClick={checkValidity} />                       
                         </Animate.FadeUp>
                         </div>
                 </form>

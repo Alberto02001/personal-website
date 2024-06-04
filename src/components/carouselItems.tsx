@@ -1,7 +1,7 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 
-const CarouselItems = (props) =>{
+const CarouselItems = (props: any) =>{
 
     return (
         <>
