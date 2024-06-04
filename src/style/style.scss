@@ -314,6 +314,10 @@
     }
 }
 
+.skills-overlay{
+    z-index: 10;
+}
+
 .skillsTitle{
     color: $white;
     font-weight: 300;

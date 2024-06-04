@@ -23,7 +23,7 @@ const About = () =>{
                     </div>
                 </div>
                 <div className="d-flex skillsBox justify-content-end">
-                    <div className="d-flex flex-column justify-content-center">
+                    <div className="d-flex flex-column justify-content-center skills-overlay">
                         <Animate.FadeIn>
                             <p className="skillsTitle">{t("about.skillsTitle")}</p>
                         </Animate.FadeIn> 
