@@ -9,9 +9,9 @@
   },
   "about": {
     "aboutTitle": "ABOUT",
-    "aboutDescription": "I'm Alberto, a passionate front-end developer, looking to improve and learn new technologies. I have experience in front-end development using frameworks like Angular and React. I also have basic knowledge of programs like photoshop and illustrator.",
+    "aboutDescription": "I am a web developer with skills in HTML, CSS, JavaScript, and TypeScript. I have been using Angular for two years in a professional setting to develop web applications. I also have a basic knowledge of React, acquired through a course, and a foundational understanding of Node.js for creating REST APIs.",
     "skillsTitle": "My Skills",
-    "skills": ["Angular", "React", "HTML", "CSS", "JS"],
+    "skills": ["Angular", "TS", "JS", "HTML/CSS", "React"],
     "CVbutton": "Open CV",
     "CVlink": "CV/CV-eng.pdf"
   },

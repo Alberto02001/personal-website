@@ -9,9 +9,9 @@
   },
   "about": {
     "aboutTitle": "ABOUT",
-    "aboutDescription": "Sono Alberto, uno sviluppatore front-end con molta passione, voglia di migliorare e imparare nuove tecnologie. Ho esperianza in sviluppo front-end utilizzando framework come Angular e React. Ho anche delle basi di grafica con programmi come photoshop e illustrator.",
+    "aboutDescription": "Sono uno sviluppatore web con competenze in HTML, CSS, JavaScript e TypeScript. Utilizzo Angular da due anni in ambito lavorativo per sviluppare applicazioni web. Ho anche una conoscenza di base di React, acquisita tramite un corso, e una familiarità di base con Node.js per la creazione di API REST.",
     "skillsTitle": "Competenze",
-    "skills": ["Angular", "React", "HTML", "CSS", "JS"],
+    "skills": ["Angular", "TS", "JS", "HTML/CSS", "React"],
     "CVbutton": "Apri il CV",
     "CVlink": "CV/CV-ita.pdf"
   },
